@@ -1,0 +1,32 @@
+{
+    "name": "exlog",
+    "version": "1.0.0",
+    "description": "Make console.log colorful and useful.",
+    "main": "index.js",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "clear": "rm -rf lib/",
+        "build": "npm run clear && rollup -c",
+        "dev": "concurrently 'rollup -c -w' 'wds --node-resolve'",
+        "dev2": "wds"
+    },
+    "keywords": [
+        "console.log",
+        "console",
+        "log",
+        "colorful"
+    ],
+    "author": "Pengfei Wang",
+    "license": "ISC",
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^9.0.2",
+        "@web/dev-server": "^0.1.35",
+        "concurrently": "^7.5.0",
+        "rollup": "^3.2.5",
+        "rollup-plugin-dts": "^5.0.0",
+        "tslib": "^2.4.1",
+        "typescript": "^4.8.4"
+    },
+    "types": "lib/index.d.ts"
+}
