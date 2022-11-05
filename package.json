@@ -8,8 +8,7 @@
     "scripts": {
         "clear": "rm -rf lib/",
         "build": "npm run clear && rollup -c",
-        "dev": "concurrently 'rollup -c -w' 'wds --node-resolve'",
-        "dev2": "wds"
+        "dev": "concurrently 'rollup -c -w' 'wds'"
     },
     "keywords": [
         "console.log",

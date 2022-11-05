@@ -12,8 +12,6 @@
         "strict": true,
         "esModuleInterop": false,
         "outDir": "out-tsc",
-        // "declaration": true,
-        // "declarationDir": "types",
         "rootDir": "./",
         "allowJs": true,
         "noImplicitAny": true
