@@ -1,10 +1,3 @@
-import { getAppInfo } from "./app";
+import Logger from "./exlog";
 
-const printInfo: () => void = () => {
-    const info = getAppInfo();
-    console.log(info);
-};
-
-printInfo();
-
-export default printInfo;
+Logger.backgroundRed.colorWhite.log("1111");
