@@ -10,11 +10,11 @@ export interface Pattern {
  * step color, referenced to https://afterwork-design.github.io/color-card/step
  */
 const color = {
-    Orange: ["#FFEFE7", "#FFD1BC", "#FFB492", "#FF9767", "#FF7A3D", "#FF5D12", "#D64400", "#AD3700", "#852A00"],
+    Orange: ["#5C1D00","#852A00","#AD3700","#D64400","#FF5D12","#FF7A3D","#FF9767","#FFB492","#FFD1BC","#FFEFE7"],
     Yellow: ["#5C4300", "#856100", "#AD7F00", "#D69D00", "#FFBC05", "#FFC832", "#FFD45F", "#FFE08C", "#FFECB9"],
     Green: ["#194A2B", "#26673E", "#358451", "#45A266", "#56BF7C", "#6ADC93", "#7FF9AB", "#A7FFC7", "#CDFFDF"],
     Cyan: ["#004F5B", "#017384", "#1098AD", "#26BED6", "#44E6FF", "#65EAFF", "#87EFFF", "#A9F3FF", "#CAF8FF"],
-    Purple: ["#4E011C", "#70082C", "#92133F", "#B42154", "#D6336C", "#F84986", "#FF73A4", "#FF9CBE", "#FFC4D9"],
+    Pink: ["#4E011C", "#70082C", "#92133F", "#B42154", "#D6336C", "#F84986", "#FF73A4", "#FF9CBE", "#FFC4D9"],
     Gray: ["#353B40", "#495057", "#5E666E", "#747C84", "#8A939B", "#A2AAB2", "#BAC1C8", "#D3D9DF", "#EDF1F6"],
     Blue: ["#001D4E", "#002C77", "#003B9F", "#004AC8", "#0E62F1", "#3A83FF", "#659EFF", "#90B9FF", "#BCD4FF"]
 };
