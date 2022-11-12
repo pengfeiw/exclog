@@ -1,17 +1,20 @@
+
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
 const config = [
     {
-        input: 'src/index.ts',
+        input: 'src/app.ts',
         output: [
             {
                 file: './lib/esm/index.js',
-                format: 'es'
+                format: 'es',
+                sourcemap: true,
             },
             {
                 file: './lib/cjs/index.js',
-                format: 'cjs'
+                format: 'cjs',
+                sourcemap: true
             }
         ],
         plugins: [
@@ -25,6 +28,5 @@ const config = [
         output: [{ file: "lib/index.d.ts", format: "es" }],
         plugins: [dts()]
     }
-];
-
+]
 export default config;

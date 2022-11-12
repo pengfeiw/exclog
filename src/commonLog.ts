@@ -1,4 +1,4 @@
-import Logger from "./exlog";
+import Logger from "./exclog";
 
 export const logError = (...msg: any) => {
     Logger.bgPink0.colorRed.log("ERROR: ", ...msg);

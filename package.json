@@ -1,16 +1,18 @@
 {
-    "name": "exlog",
+    "name": "exclog",
     "version": "1.0.0",
-    "description": "Make console.log colorful and useful.",
-    "main": "index.js",
+    "description": "Make console log colorful and easy to use.",
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/esm/index.js",
     "type": "module",
-    "private": true,
+    "private": false,
     "scripts": {
         "clear": "rm -rf lib/",
         "build": "npm run clear && rollup -c",
-        "build:watch": "npm run clear && rollup -c -w",
-        "dev": "wds",
-        "buildDev": "concurrently 'npm run clear && rollup -c -w' 'wds'"
+        "buildDev": "npm run clear && rollup --config roolup.dev.config.js",
+        "buildDev:watch": "npm run clear && rollup --config rollup.dev.config.js -w",
+        "server": "wds",
+        "buildServer": "concurrently 'npm run buildDev:watch' 'wds'"
     },
     "keywords": [
         "console.log",
@@ -18,8 +20,8 @@
         "log",
         "colorful"
     ],
-    "author": "Pengfei Wang",
-    "license": "ISC",
+    "author": "Wang Pengfei <pengfeixc@sina.com> (http://pengfeixc.com/)",
+    "license": "MIT",
     "devDependencies": {
         "@rollup/plugin-typescript": "^9.0.2",
         "@web/dev-server": "^0.1.35",
@@ -29,5 +31,6 @@
         "tslib": "^2.4.1",
         "typescript": "^4.8.4"
     },
+    "files": ["lib/"],
     "types": "lib/index.d.ts"
 }
