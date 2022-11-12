@@ -1,11 +1,15 @@
 {
     "name": "exclog",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Make console log colorful and easy to use.",
     "main": "./lib/index.cjs",
     "module": "./lib/index.mjs",
     "type": "module",
     "private": false,
+    "exports": {
+        "require": "./lib/index.cjs",
+        "import": "./lib/index.mjs"
+    },
     "scripts": {
         "clear": "rm -rf lib/",
         "build": "npm run clear && rollup -c",
