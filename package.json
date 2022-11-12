@@ -1,6 +1,6 @@
 {
     "name": "exclog",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Make console log colorful and easy to use.",
     "main": "./lib/index.cjs",
     "module": "./lib/index.mjs",
