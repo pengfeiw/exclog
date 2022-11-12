@@ -2,6 +2,8 @@
 
 Exclog is a tool used print message in browser console.
 
+![image](https://user-images.githubusercontent.com/37898750/201465010-da8383ee-9c00-48db-bed3-ba9cfa40caae.png)
+
 ## install
 
 with npm: 
