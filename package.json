@@ -8,7 +8,9 @@
     "scripts": {
         "clear": "rm -rf lib/",
         "build": "npm run clear && rollup -c",
-        "dev": "concurrently 'npm run clear && rollup -c -w' 'wds'"
+        "build:watch": "npm run clear && rollup -c -w",
+        "dev": "wds",
+        "buildDev": "concurrently 'npm run clear && rollup -c -w' 'wds'"
     },
     "keywords": [
         "console.log",

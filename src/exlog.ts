@@ -1,7 +1,7 @@
 import PatternManager from "./patternManager";
 import { defaultPatterns, Pattern } from "./style";
 
-const INIT_STYLE = "display:block;padding:3px;border-radius:4px;";
+const INIT_STYLE = "display:block;padding:3px 5px;border-radius:4px;";
 
 class Exlog {
     private _style: string = INIT_STYLE;
@@ -12,7 +12,13 @@ class Exlog {
     }
 
     log(...text: any) {
-        window.console.log(`%c${text}`, this._style);
+        let msg = "";
+        for (let t of text) {
+            msg += `${t}`;
+        }
+
+        window.console.log(`%c${msg}`, this._style);
+
         this._style = INIT_STYLE;
     }
 
