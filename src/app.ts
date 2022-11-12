@@ -1,5 +1,5 @@
-import { logError, logSuccess, logInfo, logWarn } from "./commonLog";
-import Logger from "./exclog";
+import { logError, logSuccess, logInfo, logWarn } from "./";
+import Logger from "./";
 
 logError("this is a error.", " this is an another error.");
 logSuccess("This is a success message.");

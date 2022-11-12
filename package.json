@@ -2,17 +2,18 @@
     "name": "exclog",
     "version": "1.0.0",
     "description": "Make console log colorful and easy to use.",
-    "main": "./lib/cjs/index.js",
-    "module": "./lib/esm/index.js",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.mjs",
     "type": "module",
     "private": false,
     "scripts": {
         "clear": "rm -rf lib/",
         "build": "npm run clear && rollup -c",
-        "buildDev": "npm run clear && rollup --config roolup.dev.config.js",
+        "buildDev": "npm run clear && rollup --config rollup.dev.config.js",
         "buildDev:watch": "npm run clear && rollup --config rollup.dev.config.js -w",
         "server": "wds",
-        "buildServer": "concurrently 'npm run buildDev:watch' 'wds'"
+        "buildServer": "concurrently 'npm run buildDev:watch' 'wds'",
+        "publish": "npm run build && npm publish"
     },
     "keywords": [
         "console.log",

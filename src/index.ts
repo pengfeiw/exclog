@@ -1,2 +1,2 @@
-export * from "./exclog";
+export { default } from "./exclog";
 export * from "./commonLog";

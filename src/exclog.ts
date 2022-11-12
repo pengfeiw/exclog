@@ -3,7 +3,7 @@ import { defaultPatterns, Pattern } from "./style";
 
 const INIT_STYLE = "display:block;padding:3px 5px;border-radius:4px;";
 
-class Exlog {
+class Exclog {
     private _style: string = INIT_STYLE;
     private _patternManager: PatternManager = new PatternManager();
 
@@ -17,7 +17,7 @@ class Exlog {
             msg += `${t}`;
         }
 
-        window.console.log(`%c${msg}`, this._style);
+        console.log(`%c${msg}`, this._style);
 
         this._style = INIT_STYLE;
     }
@@ -26,11 +26,15 @@ class Exlog {
         this._patternManager.setPattern(pattern);
     }
 
+    setPatterns(patterns: Pattern[]) {
+        this._patternManager.setPatterns(patterns);
+    }
+
     clearPattern() {
         this._patternManager.clear();
     }
 
-    static Logger = new Proxy(new Exlog() as ProxyObj, {
+    static Logger = new Proxy(new Exclog() as ProxyObj, {
         get: function (target, propKey: string, receiver) {
             if (propKey in target) {
                 return (target as any)[propKey];
@@ -46,8 +50,8 @@ class Exlog {
     })
 }
 
-type ProxyObj = Exlog & { [key: string]: ProxyObj };
+type ProxyObj = Exclog & { [key: string]: ProxyObj };
 
-const Logger = Exlog.Logger;
+const Logger = Exclog.Logger;
 
 export default Logger;

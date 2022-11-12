@@ -7,12 +7,12 @@ const config = [
         input: 'src/app.ts',
         output: [
             {
-                file: './lib/esm/index.js',
+                file: './lib/index.mjs',
                 format: 'es',
                 sourcemap: true,
             },
             {
-                file: './lib/cjs/index.js',
+                file: './lib/index.cjs',
                 format: 'cjs',
                 sourcemap: true
             }

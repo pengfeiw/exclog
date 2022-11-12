@@ -6,11 +6,11 @@ const config = [
         input: 'src/index.ts',
         output: [
             {
-                file: './lib/esm/index.js',
+                file: './lib/index.mjs',
                 format: 'es'
             },
             {
-                file: './lib/cjs/index.js',
+                file: './lib/index.cjs',
                 format: 'cjs'
             }
         ],
